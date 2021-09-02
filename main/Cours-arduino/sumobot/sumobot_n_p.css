@@ -1,0 +1,206 @@
+/* inclure les polices */
+
+@font-face {
+    font-family: Amatic;
+    src: url(../../../police/AmaticSC-Regular.ttf);
+}
+@font-face {
+    font-family: Itim;
+    src: url(../../../police/Itim-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../../../police/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../../../police/Roboto-Regular.ttf);
+}
+
+
+/* pour les liens */
+
+
+a:hover
+{
+    font-weight: bold;
+}
+a:visited
+{
+    text-decoration: none;
+
+}
+a:active
+{
+    color:red;
+}
+a
+{
+    text-decoration: none;
+}
+
+
+/* réitnitialiser la marge pas défaut */
+
+
+body /*réinitialiser toute les marges*/
+{
+    margin: 0 auto;
+    display: flex;
+    align-content:space-around;
+    flex-direction: column;
+    background-color: #292929;
+}
+
+
+/* On s'occupe de la page qui est toute en haut */
+header /*mettre la barre en haut*/
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+}
+#jour_nuit
+{
+    display:flex;
+    align-items: center;
+}
+#en_tete_telephone /*gérer l'en tête*/
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#menu_image /*centrer les images du menu*/
+{
+    display:flex;
+    justify-content: center;
+}
+#menu_checkbox /*ne pas afficher la case à cocher*/
+{
+    display: none;
+}
+#menu_ordinateur /*on est sur pc donc pas double de menu*/
+{
+    display: none;
+}
+header img /*modifier la taille et les marges des images*/
+{
+    height:5em;
+    margin:0.5em;
+}
+.zebrus /*mettre en plus grand le logo*/
+{
+    height:6em;
+}
+#menu_telephone /*cacher le menu si ce n'est pas cliquer*/
+{
+    display:none;
+}
+#menu_checkbox:checked ~ #menu_telephone /*afficher le menu si c'est cliqué*/
+{
+    display:flex;
+    list-style-type: none;
+    flex-direction: column;
+}
+#menu_telephone a /*changer le style et la police du menu*/
+{
+    color:black;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+}
+#en_tete_telephone h2 /*changer le style et la police du titre*/
+{
+    color:white;
+    font-family: "Roboto";
+    display:flex;
+    align-items:center;
+    font-size: 2em;
+}
+
+/*titre*/
+
+h1
+{
+    display:flex;
+    justify-content: center;
+    color:#fab400;
+    font-family: "Amatic";
+    margin:0.5em;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+/*les chapitres*/
+
+.chapitres li
+{
+    display: flex;
+    flex-direction: column;
+    border-width: 0.25em;
+    border-style: solid;
+    border-color:rgb(105, 105, 105);
+    border-radius: 2em;
+    margin: 1em;
+}
+.chapitres li:hover
+{
+    background-image: url(../../index-image/croix_n.png);
+    background-repeat: repeat;
+}
+.image
+{
+    min-height: 9em;
+    margin:2em;
+}
+h3
+{
+    margin:1em;
+    color: #62bec2;
+    font-size: xx-large;
+}
+.description
+{
+    font-size: large;
+    color:white;
+    margin:0.5em;
+}
+.texte
+{
+    display: flex;
+    flex-direction: row;
+    font-family: "Roboto";
+}
+
+
+/* pied de page */
+footer /*mettre en page le footer*/
+{
+    background-color:rgb(98,190,194);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titre_footer /*mettre en page les titres*/
+{
+    text-decoration: underline;
+    font-size:x-large;
+}
+footer a,p,div /*gérer les marges*/
+{
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+}
+footer a /*mettre les liens en italique*/
+{
+    font-style: italic;
+    color:black;
+}
+#aproposmoi, #apropossite, #footerplan /*centrer les textes eux mêmes*/
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
