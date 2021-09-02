@@ -1,0 +1,434 @@
+/* inclure les polices */
+
+@font-face {
+    font-family: Amatic;
+    src: url(../../police/AmaticSC-Regular.ttf);
+}
+@font-face {
+    font-family: Itim;
+    src: url(../../police/Itim-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../../police/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../../police/Roboto-Regular.ttf);
+}
+
+
+/* pour les liens */
+
+@media (min-width : 1016px){
+    a:hover
+    {
+        font-weight: bold;
+    }
+    a:visited
+    {
+        text-decoration: none;
+
+    }
+    a:active
+    {
+        color:red;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    /* réitnitialiser la marge pas défaut */
+
+
+    body /*rénitialiser les marges*/
+    {
+        margin: 0 auto;
+        display: flex;
+        align-content:space-around;
+        flex-direction: column;
+        background-color: #292929;
+    }
+
+    /* On s'occupe de la page qui est toute en haut */
+
+    #menu_telephone /*enlever le menu pour le telephone*/
+    {
+        display: none;
+    }
+    #en_tete_telephone /*mettre les icones aligné*/
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+    header /*faire le dégradé et écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+    }
+
+    nav /*écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #menu_ordinateur /*mettre les éléments de la liste en mode horizontale*/
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    header img /*définir la taille des images et les marges*/
+    {
+        height:4em;
+        margin:0.5em;
+    }
+    #text_discord /*éviter que le texte soit trop coller à gauche*/
+    {
+        margin-right: 0.5em;
+    }
+    .zebrus /*mettre le logo plus grand*/
+    {
+        height:6em;
+    }
+    header li /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    header #menu_ordinateur a /*centrer le texte*/
+    {
+        display: flex;
+        align-items:center;
+    }
+    #menu_image /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    #menu_checkbox /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    header h2 /*titre du site*/
+    {
+        font-family: "Roboto";
+        color:white;
+        font-size: 2em;
+    }
+    header a /*titre du menu*/
+    {
+        color:black;
+        font-size: 1em;
+    }
+
+    /*les projets*/
+
+    h1 /*gérer le titre*/
+    {
+        display:flex;
+        justify-content: center;
+        color:#fab400;
+        font-family: "Amatic";
+        margin:0.5em;
+        font-size: 3em;
+        text-decoration: underline;
+    }
+    #but  /*gérer les paragraphes d'explications*/
+    {
+        max-width: 15em;
+        font-size: large;
+        font-family: "Roboto";
+        text-align: justify;
+    }
+    #tt_projet /*gérer tout les projets*/
+    {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        color:white
+    }
+    #tt_projet img /*gérer la taille des images*/
+    {
+        height:20em;
+        margin:0.5em;
+    }
+    #tt_projet li img /*gérer la taille des ronds*/
+    {
+        height:2em;
+    }
+    ul /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    #projet /*faire les contours des différents projets*/
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-width: 0.25em;
+        border-style: solid;
+        border-color:rgb(105, 105, 105);
+        border-radius: 2em;
+        margin-bottom: 3em;
+    }
+    #projet:hover
+    {
+        background-image: url(../index-image/croix_n.png);
+        background-repeat: repeat;
+    }
+    #titre a /*gérer les titres des projets*/
+    {
+        font-size: xx-large;
+        color:rgb(98,190,194);
+    }  
+    #projet li /*centrer le texte par rapport aux ronds*/
+    {
+        display:flex;
+        align-items: center;
+    }
+    #gras /*mettre des éléments en gras*/
+    {
+        font-weight:bold;
+        background-color: white;
+        color:black;
+    }
+
+    /* pied de page */
+    footer /*gérer la couleur*/
+    {
+        background-color: #62bec2;
+    }
+    footer /*mettre en couleur*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .titre_footer /*mettre les titres plus grand*/
+    {
+        font-size: x-large;
+        text-decoration:underline;
+    }
+    footer a,p,div /*gérer les marges*/
+    {
+        margin-top:1em;
+        margin-bottom: 1em;
+    }
+    footer a /*mettre les liens en italique*/
+    {
+        font-style: italic;
+        color:black;
+    }
+}
+
+@media (max-width : 1015px){
+    a:hover
+    {
+        font-weight: bold;
+    }
+    a:visited
+    {
+        text-decoration: none;
+
+    }
+    a:active
+    {
+        color:red;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    /* réitnitialiser la marge pas défaut*/
+
+
+    body /*reseat tout le body*/
+    {
+        margin: 0 auto;
+        display: flex;
+        align-content:space-around;
+        flex-direction: column;
+        background-color: #292929;
+
+    }
+
+    /*les projets*/
+
+    h1 /*gérer le titre*/
+    {
+        display:flex;
+        justify-content: center;
+        color:#fab400;
+        font-family: "Amatic";
+        margin:0.5em;
+        font-size: 3em;
+        text-decoration: underline;
+    }
+    #but  /*gérer les paragraphes d'explications*/
+    {
+        max-width: 15em;
+        font-size: large;
+        font-family: "Roboto";
+        text-align: justify;
+    }
+    #tt_projet /*gérer tout les projets*/
+    {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        color:white;
+    }
+    #tt_projet img /*gérer la taille des images*/
+    {
+        height:20em;
+        margin:0.5em;
+    }
+    #tt_projet li img /*gérer la taille des ronds*/
+    {
+        height:2em;
+    }
+    ul /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    #projet /*faire les contours des différents projets*/
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-width: 0.25em;
+        border-style: solid;
+        border-color:rgb(105, 105, 105);
+        border-radius: 2em;
+        margin-bottom: 3em;
+    }
+    #projet:hover
+    {
+        background-image: url(../index-image/croix_n.png);
+        background-repeat: repeat;
+    }
+    #titre a /*gérer les titres des projets*/
+    {
+        font-size: xx-large;
+        color:rgb(98,190,194);
+    }  
+    #projet li /*centrer le texte par rapport aux ronds*/
+    {
+        display:flex;
+        align-items: center;
+    }
+    #gras /*mettre des éléments en gras*/
+    {
+        font-weight:bold;
+        background-color: white;
+        color:black;
+    }
+
+
+
+    /* On s'occupe de la page qui est toute en haut */
+
+    #menu_telephone /*on est sur pc donc pas la peine d'un deuxième menu*/
+    {
+        display: none;
+    }
+    #en_tete_telephone /*mettre les qqs icones bien aligné*/
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+
+    header /*faire le dégradé et écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+    }
+
+    nav /*écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #menu_ordinateur /*mettre les éléments de la liste en mode horizontale*/
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    header img /*définir la taille des images et les marges*/
+    {
+        height:4em;
+        margin:0.5em;
+    }
+    .zebrus /*mettre le logo plus grand*/
+    {
+        height:6em;
+    }
+    #text_discord /*éviter que le texte soit trop coller à gauche*/
+    {
+        margin-right: 0.5em;
+    }
+    header li /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    header #menu_ordinateur a /*centrer le texte*/
+    {
+        display: flex;
+        align-items:center;
+    }
+    #menu_image /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    #menu_checkbox /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    header h2 /*titre du site*/
+    {
+        font-family: "Roboto";
+        color:white;
+        font-size: 1.5em;
+    }
+    header a /*titre du menu*/
+    {
+        color:black;
+        font-size: 1em;
+    }
+    /* pied de page */
+    footer /*gérer la couleur*/
+    {
+        background-color: #62bec2;
+    }
+    footer /*mettre en couleur*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .titre_footer /*mettre les titres plus grand*/
+    {
+        font-size: x-large;
+        text-decoration:underline;
+    }
+    footer a,p,div /*gérer les marges*/
+    {
+        margin-top:1em;
+        margin-bottom: 1em;
+    }
+    footer a /*mettre les liens en italique*/
+    {
+        font-style: italic;
+        color:black;
+    }
+}
