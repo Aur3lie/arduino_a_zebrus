@@ -1,0 +1,602 @@
+/* inclure les polices */
+
+@font-face {
+    font-family: Amatic;
+    src: url(../police/AmaticSC-Regular.ttf);
+}
+@font-face {
+    font-family: Itim;
+    src: url(../police/Itim-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../police/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../police/Roboto-Regular.ttf);
+}
+
+
+/* pour les liens */
+
+@media (min-width : 1016px){
+    a:hover
+    {
+        font-weight: bold;
+    }
+    a:visited
+    {
+        text-decoration: none;
+
+    }
+    a:active
+    {
+        color:red;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    /* réitnitialiser la marge pas défaut */
+
+
+    body /*rénitialiser les marges*/
+    {
+        margin: 0 auto;
+        display: flex;
+        align-content:space-around;
+        flex-direction: column;
+
+    }
+
+    /* On s'occupe de la page qui est toute en haut */
+
+    #menu_telephone /*enlever le menu pour le telephone*/
+    {
+        display: none;
+    }
+    #en_tete_telephone /*mettre les icones aligné*/
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+    header /*faire le dégradé et écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+    }
+
+    nav /*écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #menu_ordinateur /*mettre les éléments de la liste en mode horizontale*/
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    header img /*définir la taille des images et les marges*/
+    {
+        height:4em;
+        margin:0.5em;
+    }
+    #text_discord /*éviter que le texte soit trop coller à gauche*/
+    {
+        margin-right: 0.5em;
+    }
+    .zebrus /*mettre le logo plus grand*/
+    {
+        height:6em;
+    }
+    header li /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    header #menu_ordinateur a /*centrer le texte*/
+    {
+        display: flex;
+        align-items:center;
+    }
+    #menu_image /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    #menu_checkbox /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    header h2 /*titre du site*/
+    {
+        font-family: "Roboto";
+        color:white;
+        font-size: 2em;
+    }
+    header a /*titre du menu*/
+    {
+        color:black;
+        font-size: 1em;
+    }
+
+
+    /*pour la deuxième partie de la page*/
+
+
+    #top-page /*mettre l'image de fond d'écran*/
+    {
+        background-image: url("index-image/ecran_accueil.jpg");
+        background-size: cover;
+        height:105vh;
+    }
+
+    #landing-page h1 /*écrire le gros slogan*/
+    {
+        font-size: 3em;
+        font-family: "Amatic";
+        color:#fab400;
+        padding: 6em 1em;
+    }
+
+
+
+    /* pour les différents projets proposé*/
+
+    #projet/*gérer les projets en général*/
+    {
+        margin-top: 5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #projet img /*mettre toute les images*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height:15em;
+    }
+    .text-projet /*changer le couleur du texte*/
+    {
+        font-family: "Roboto";
+        color:#345E7E;
+        font-size: 2em;
+        
+    }
+    #projet:hover /*mettre les petites croix*/
+    {
+        background-image: url("index-image/croix.png");
+        background-repeat: repeat;
+    }
+    #sous-projet /*mettre en colonne horizontale*/
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*les titres*/
+    #titre_phrase, #titre_projet /*changer le style du titre*/
+    {
+        color:#fab400;
+        display: flex;
+        justify-content: center;
+        margin:1em;
+        font-size: x-large;
+        text-decoration:underline;
+    }
+
+    /* les phrases qui vendent */
+
+
+    #phrase_ul /*gérer la totalité des boites*/
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #phrase li /*gérer les boites une par une*/
+    {
+        display:flex;
+        width: 25em;
+        height:10em;
+        text-decoration: none;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: "Roboto";
+        color:black;
+        font-size: 1em;
+        
+    }
+    .phrase1 /*gérer la couleur des boites*/
+    {
+        background-color: cadetblue;
+        
+    }
+    .phrase2
+    {
+        background-color: red;
+    }
+    .phrase3
+    {
+        background-color: blueviolet;
+    }
+    .phrase4
+    {
+        background-color: pink;
+    }
+    .phrase5
+    {
+        background-color: green;
+    }
+    .phrase6
+    {
+        background-color: yellow;
+    }
+    .phrase1:hover /*aggrandir les boites*/
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase2:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase3:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase4:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase5:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase6:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase li
+    {
+        font-family: Roboto;
+    }
+
+    /* pied de page */
+    footer /*gérer la couleur*/
+    {
+        background-color: #62bec2;
+    }
+    footer /*mettre en couleur*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .titre_footer /*mettre les titres plus grand*/
+    {
+        font-size: x-large;
+        text-decoration:underline;
+    }
+    footer a,p,div /*gérer les marges*/
+    {
+        margin-top:1em;
+        margin-bottom: 1em;
+    }
+    footer a /*mettre les liens en italique*/
+    {
+        font-style: italic;
+        color:black;
+    }
+}
+
+
+
+@media (max-width : 1015px){
+    a:hover
+    {
+        font-weight: bold;
+    }
+    a:visited
+    {
+        text-decoration: none;
+
+    }
+    a:active
+    {
+        color:red;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    /* réitnitialiser la marge pas défaut*/
+
+
+    body /*reseat tout le body*/
+    {
+        margin: 0 auto;
+        display: flex;
+        align-content:space-around;
+        flex-direction: column;
+
+    }
+
+
+
+    /* On s'occupe de la page qui est toute en haut */
+
+    #menu_telephone /*on est sur pc donc pas la peine d'un deuxième menu*/
+    {
+        display: none;
+    }
+    #en_tete_telephone /*mettre les qqs icones bien aligné*/
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+
+    header /*faire le dégradé et écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+    }
+
+    nav /*écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #menu_ordinateur /*mettre les éléments de la liste en mode horizontale*/
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    header img /*définir la taille des images et les marges*/
+    {
+        height:4em;
+        margin:0.5em;
+    }
+    .zebrus /*mettre le logo plus grand*/
+    {
+        height:5em;
+    }
+    #text_discord /*éviter que le texte soit trop coller à gauche*/
+    {
+        margin-right: 0.5em;
+    }
+    header li /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    header #menu_ordinateur a /*centrer le texte*/
+    {
+        display: flex;
+        align-items:center;
+    }
+    #menu_image /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    #menu_checkbox /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    header h2 /*titre du site*/
+    {
+        font-family: "Roboto";
+        color:white;
+        font-size: 1.5em;
+    }
+    header a /*titre du menu*/
+    {
+        color:black;
+        font-size: 1em;
+    }
+
+
+    /*pour la deuxième partie de la page*/
+
+
+    #top-page /*mettre l'image de fond d'écran*/
+    {
+        background-image: url("index-image/ecran_accueil.jpg");
+        background-size: cover;
+        height:105vh;
+    }
+
+    #landing-page h1 /*écrire le gros slogan*/
+    {
+        font-size: 3em;
+        font-family: "Amatic";
+        color:#fab400;
+        padding: 5em 1em;
+    }
+
+
+
+    /* pour les différents projets proposé*/
+
+    #projet/*gérer les projets en général*/
+    {
+        margin-top: 5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #projet img /*changer la taille des images*/
+    {
+        height:10em;
+    }
+    #projet img /*bien charger les images*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height:15em;
+    }
+    .text-projet /*changer le couleur du texte*/
+    {
+        font-family: "Roboto";
+        color:#345E7E;
+        font-size: 2em;
+        
+    }
+    #projet:hover /*mettre les petites croix*/
+    {
+        background-image: url("index-image/croix.png");
+        background-repeat: repeat;
+    }
+    #sous-projet /*mettre en colonne horizontale*/
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*les titres*/
+    #titre_phrase, #titre_projet /*changer le style du titre*/
+    {
+        color:#fab400;
+        display: flex;
+        justify-content: center;
+        margin:1em;
+        font-size: x-large;
+        text-decoration:underline;
+    }
+
+    /* les phrases qui vendent */
+
+
+    #phrase_ul /*gérer la totalité des boites*/
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #phrase li /*gérer les boites une par une*/
+    {
+        display:flex;
+        width: 25em;
+        height:10em;
+        text-decoration: none;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: "Roboto";
+        color:black;
+        font-size: 1em;
+        
+    }
+    .phrase1 /*gérer la couleur des boites*/
+    {
+        background-color: cadetblue;
+        
+    }
+    .phrase2
+    {
+        background-color: red;
+    }
+    .phrase3
+    {
+        background-color: blueviolet;
+    }
+    .phrase4
+    {
+        background-color: pink;
+    }
+    .phrase5
+    {
+        background-color: green;
+    }
+    .phrase6
+    {
+        background-color: yellow;
+    }
+    .phrase1:hover /*aggrandir les boites*/
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase2:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase3:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase4:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase5:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase6:hover
+    {
+        display: flex;
+        flex:12em;
+    }
+    .phrase li
+    {
+        font-family: Roboto;
+    }
+
+    /* pied de page */
+    footer /*gérer la couleur*/
+    {
+        background-color: #62bec2;
+    }
+    footer /*mettre en couleur*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .titre_footer /*mettre les titres plus grand*/
+    {
+        font-size: x-large;
+        text-decoration:underline;
+    }
+    footer a,p,div /*gérer les marges*/
+    {
+        margin-top:1em;
+        margin-bottom: 1em;
+    }
+    footer a /*mettre les liens en italique*/
+    {
+        font-style: italic;
+        color:black;
+    }
+}
