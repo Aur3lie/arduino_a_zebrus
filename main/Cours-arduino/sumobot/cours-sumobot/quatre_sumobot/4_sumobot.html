@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino à Zebrus - Apprenez à coder en C++</title>
+    <link rel="stylesheet" media="screen and (min-width:900px)" href="4_sumobot_g.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="4_sumobot_p.css">
+</head>
+<body>
+    <!-- top-page -->
+    <section id="top-page">
+        <header>
+            <section id="en_tete_telephone">
+                <a href=""><img src="../../../../../image-header/cercle_zebrus.png" alt="Logo zebrus" class="zebrus"></a>
+                <h2 id="en_haut">De Arduino à Zebrus</h2>
+                <a href="4_sumobot_n.html" id="jour_nuit"><img src="../../../../../image-header/jour-nuit.png" alt="Logo paramètre" class="logo_header"></a>
+            </section>
+            <nav>
+                
+                <ul id="menu_ordinateur">
+                    <li><a href="../../../../../main/index.html" class="menu"><img src="../../../../../image-header/maison.png" alt="Logo maison" class="logo_header">Accueil</a></li>
+                    
+                    <li><a href="../../../../Cours-arduino/cours_arduino.html" class="menu"><img src="../../../../../image-header/cours.png" alt="Logo cours" class="logo_header">Cours Arduino</a></li>
+                    
+                    <li><a href="../../../../Quizz-arduino/quizz_arduino.html" class="menu"><img src="../../../../../image-header/quizz.png" alt="Logo quizz" class="logo_header">Quizz Arduino</a></li>
+                    
+                    <li><a href="https://discord.gg/qn2N2w9gwj" class="menu" id="text_discord"><img src="../../../../../image-header/discord.png" alt="Logo discord" class="logo_header">Discord</a></li>
+                </ul>
+
+                
+                <input type="checkbox" id="menu_checkbox">
+                <label for="menu_checkbox" id="menu_image"><img src="../../../../../image-header/menu.png" alt="hamburgeur menu"></label>
+                
+
+                <ul id="menu_telephone">
+                    <li><a href="../../../../../main/index.html" class="menu"><img src="../../../../../image-header/maison.png" alt="Logo maison" class="logo_header">Accueil</a></li>
+                    
+                    <li><a href="../../../../Cours-arduino/cours_arduino.html" class="menu"><img src="../../../../../image-header/cours.png" alt="Logo cours" class="logo_header">Cours Arduino</a></li>
+                    
+                    <li><a href="../../../../Quizz-arduino/quizz_arduino.html" class="menu"><img src="../../../../../image-header/quizz.png" alt="Logo quizz" class="logo_header">Quizz Arduino</a></li>
+                    
+                    <li><a href="https://discord.gg/qn2N2w9gwj" class="menu"><img src="../../../../../image-header/discord.png" alt="Logo discord" class="logo_header">Discord</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!--titre-->
+
+    <a href="../../sumobot.html" class="cours_texte">Retour à la liste des cours</a>
+
+    <h1>Leçon 4 - Le bouton</h1>
+
+    <!--navigation-->
+    <ol>
+        <li><a href="#lien_un">Quelle utilisation ?</a></li>
+        <li><a href="#lien_deux">Le cablage</a></li>
+        <li><a href="#lien_trois">La programmation</a></li>
+    </ol>
+
+    
+    <article>
+
+        <aside>
+            <h3 id="titre_aside">Récap</h3>
+            <h4>Câblage</h4>
+            <p>Brancher sur une entrée digitale<br>Eviter les interférences grâce à une résistance de pull-down</p>
+            <h4>Programmation</h4>
+            <p>Définir une sortie avec un pinMode(PIN_BOUTON, INPUT);<br>Lire la valeur avec un digitalRead(PIN_BOUTON)</p>
+        </aside>
+
+        <h3 class="cours_titre" id="lien_un">1. Quelle utilisation ?</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Dans ce projet, le composant le plus simple que nous allons utiliser est l'interrupteur. Il conviendra donc de commencer ce cours par ce composant. L'interrupteur que nous allons utiliser peut prendre deux positions différentes et va permettre d'introduire la notion de résistance de pull-down (tirage vers le bas pour les francophones). Comme dit dans le premier cours, le servomoteur permettra de descendre et monter l'avant du robot pour que ce dernier reste dans la taille autorisée : 10cm x 10cm. Le bouton permettrra donc de gérer les deux modes du robot : le mode classique de combat mais aussi le mode afin de relever l'avant du robot pour qu'il entre dans les normes.</p>
+        <a href="image_quatre_sumobot/sumobot hautbas.png"> <img src="image_quatre_sumobot/sumobot hautbas.png" alt="schéma devant du sumobot en différente position" class="image_schema"> </a>
+
+
+        <h3 class="cours_titre" id="lien_deux">2. Le câblage</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Voyons tout d'abord sur quelle entrée/sortie de l'Arduino brancher notre interrupteur. Notre interrupteur est un capteur. Si nous voulons schématiser, nous pouvons
+            dire que l'information sort de l'interrupteur et entre dans la carte Arduino. Cette information peut prendre deux valeurs, l'état haut (1) et l'état bas (0). Nous allons
+            donc le brancher sur une des entrées/sorties numériques de l'Arduino, dans notre cas D12. </p>
+        
+        <p class="cours_texte"> <span class="espace">_______</span> Si je vous demande de brancher ce bouton, vous allez sûrement brancher une des pattes sur une sortie 5V et l'autre sur une sortie numérique de l'Arduino. Cependant, si
+            vous faites cela et que vous ouvrez le moniteur série de l'Arduino (nous verrons cela juste après) vous verrez que lorsque l'interrupteur n'est pas activé, il y a des
+            interférences qui se représentent par des états haut alors que l'interrupteur devrait être à l'état bas. Cela est dû aux ondes électromagnétiques provoquées à tous les appareils
+            de la maison, en effet lorsque l'interrupteur est ouvert le fil est en quelque sorte dans le vide.</p>
+        <a href="image_quatre_sumobot/interrupteur_sans_pull.png"> <img src="image_quatre_sumobot/interrupteur_sans_pull.png" alt="schéma sans pull-up / down" class="image_schema"> </a>
+
+        <p class="cours_texte"> <span class="espace">_______</span> Il suffit donc de mettre une résistance de pull-down, c'est une résistance de rappel. Cette résistance va permettre d'empêcher les ondes électromgagnétiques d'interférer
+            dans votre circuit. Vous aurez donc un signal qui sera à l'état haut lorsque l'interrupteur est fermé et à l'état bas lorsque l'interrupteur est ouvert. Cette résistance
+            est reliée au bouton d'une part et à la masse d'autre part (d'où le "down" dans "pull-down").</p>
+        <a href="image_quatre_sumobot/interrupteur_pull_down.png"> <img src="image_quatre_sumobot/interrupteur_pull_down.png" alt="schéma avec pull-down" class="image_schema"> </a>
+
+        <div class="div_question_zebrus"> <img src="image_quatre_sumobot/zebre.png" alt="zebrus (mascotte)" class="logo_zebrus_question">
+        <p class="question_zebrus">Mais comment dimensionner cette résistance ? </p> </div>
+
+        <p class="cours_texte"> <span class="espace">_______</span> Il suffit d'utiliser cette équation : R(la valeur de la résistance) = V(la tension dans le circuit) / I(le nombre d'ampère que l'on souhaite limiter). Pour des petits
+            montages électroniques avec Arduino, il est commun d'utiliser une résistance de 10kΩ (Ohm), c'est ce que nous allons faire ici.</p>
+        <a href="image_quatre_sumobot/equation_RVI.png"><img src="image_quatre_sumobot/equation_RVI.png" alt="équation exposé au-dessus" class="image_schema" id="equation"></a>
+
+        <p class="cours_texte"> <span class="espace">_______</span> Pour votre culture il est aussi possible d'utiliser une résistance de pull-up qui est préférable, appelée aussi résistance de tirage. Cela fonctionne exactement de la 
+            même manière mais il suffit de relier la résistance au 5V (dans notre cas). Il y a même des résistances de pull-up interne, il suffit d'écrire pinMode(votre_entré, 
+            INPUT_PULLUP); dans le setup. Cependant nous n'allons pas utiliser cela car nous avons démonté la carte comme nous l'avons vu dans le chapitre 2. De plus
+            cette résistance a une valeur trop forte (entre 20 et 50kΩ).</p>
+        <a href="image_quatre_sumobot/interrupteur_pull_up.png"><img src="image_quatre_sumobot/interrupteur_pull_up.png" alt="resistance pull-up" class="image_schema"></a>
+
+        <h3 class="cours_titre" id="lien_trois">3. La programmation</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> La programmation est la partie la plus simple de cette leçon. En effet, il suffit seulement  de réaliser deux boucles. La première permet d'activer la fonction principale
+            du robot, la fonction de combat. La deuxième permet de relever l'avant du robot pour rester dans les normes exigées : 10cm x 10cm. Commençons par analyser de manière linéaire le code. La première ligne permet de définir le pin du bouton, 
+            avec le #define. Cette variable ne prendra pas de place dans la mémoire du microcontrôleur car la valeur est remplacée avant la compilation du programme. C'est le contraire de la définition de la variable suivante qui va stocker la valeur 
+            de l'interrupteur. Dans le setup, on va initialiser le port série pour des tests et l'interrupteur en une entrée. Dans le loop, on va lire l'information et la stocker dans une variable déjà prédéfinie. Pour nos tests, on va afficher la valeur
+            de la variable etat_interrupteur dans le moniteur série. On va ensuite, selon la valeur de l'interrupteur effectuer le programme afin de combatre ou de relever l'avant du robot.  
+        </p>
+        <pre>
+            <font color="#5e6d03">#define</font> <font color="#000000">PIN_BOUTON</font> <font color="#000000">10</font>
+            
+            <font color="#00979c">int</font> <font color="#000000">etat_bouton</font><font color="#000000">;</font>
+            
+            <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+             &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">9600</font><font color="#000000">)</font><font color="#000000">;</font>
+             &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">PIN_BOUTON</font><font color="#434f54">,</font> <font color="#00979c">INPUT</font><font color="#000000">)</font><font color="#000000">;</font>
+            <font color="#000000">}</font>
+            
+            <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+             &nbsp;<font color="#000000">etat_bouton</font> <font color="#434f54">=</font> <font color="#d35400">digitalRead</font><font color="#000000">(</font><font color="#000000">PIN_BOUTON</font><font color="#000000">)</font><font color="#000000">;</font>
+             &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">etat_bouton</font><font color="#000000">)</font><font color="#000000">;</font>
+             &nbsp;<font color="#5e6d03">if</font><font color="#000000">(</font><font color="#000000">etat_bouton</font> <font color="#434f54">==</font> <font color="#000000">1</font><font color="#000000">)</font><font color="#000000">{</font>
+             &nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;combat du robot</font>
+             &nbsp;<font color="#000000">}</font>
+             &nbsp;<font color="#5e6d03">else</font><font color="#000000">{</font>
+             &nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;relever l&#39;avant du robot</font>
+             &nbsp;<font color="#000000">}</font>
+            <font color="#000000">}</font>
+            
+        </pre>
+
+    </article>
+
+    <!-- pied de page -->
+    <footer>
+        <section id="aproposmoi">
+            <p class="titre_footer">A propos de moi</p>
+            <a href="mailto:amathys@outlook.fr">Me contacter</a>
+        </section>
+        
+        <section id="apropossite">
+            <p class="titre_footer">A propos du site</p>
+            <p>Ce site ne contient aucun cookies</p>
+            <p>Ce site n'utilise pas de données personnelles</p>
+            <div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Image par <a href="https://pixabay.com/fr/users/tayebmezahdia-4194100/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4299135">Tayeb MEZAHDIA</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4299135">Pixabay</a></div>
+        </section>
+
+        <section id="footerplan">
+            <p class="titre_footer">Le plan de la page</p>
+            <a href="#en_haut">Allez en haut</a><br>
+        </section>
+
+        
+    </footer>
+</body>
+</html>

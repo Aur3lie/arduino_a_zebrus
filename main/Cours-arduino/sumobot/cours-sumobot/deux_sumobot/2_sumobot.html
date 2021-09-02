@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino à Zebrus - Apprenez à coder en C++</title>
+    <link rel="stylesheet" media="screen and (min-width:900px)" href="2_sumobot_g.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="2_sumobot_p.css">
+</head>
+<body>
+    <!-- top-page -->
+    <section id="top-page">
+        <header>
+            <section id="en_tete_telephone">
+                <a href=""><img src="../../../../../image-header/cercle_zebrus.png" alt="Logo zebrus" class="zebrus"></a>
+                <h2 id="en_haut">De Arduino à Zebrus</h2>
+                <a href="2_sumobot_n.html" id="jour_nuit"><img src="../../../../../image-header/jour-nuit.png" alt="Logo paramètre" class="logo_header"></a>
+            </section>
+            <nav>
+                
+                <ul id="menu_ordinateur">
+                    <li><a href="../../../../../main/index.html" class="menu"><img src="../../../../../image-header/maison.png" alt="Logo maison" class="logo_header">Accueil</a></li>
+                    
+                    <li><a href="../../../../Cours-arduino/cours_arduino.html" class="menu"><img src="../../../../../image-header/cours.png" alt="Logo cours" class="logo_header">Cours Arduino</a></li>
+                    
+                    <li><a href="../../../../Quizz-arduino/quizz_arduino.html" class="menu"><img src="../../../../../image-header/quizz.png" alt="Logo quizz" class="logo_header">Quizz Arduino</a></li>
+                    
+                    <li><a href="https://discord.gg/qn2N2w9gwj" class="menu" id="text_discord"><img src="../../../../../image-header/discord.png" alt="Logo discord" class="logo_header">Discord</a></li>
+                </ul>
+
+                
+                <input type="checkbox" id="menu_checkbox">
+                <label for="menu_checkbox" id="menu_image"><img src="../../../../../image-header/menu.png" alt="hamburgeur menu"></label>
+                
+
+                <ul id="menu_telephone">
+                    <li><a href="../../../../../main/index.html" class="menu"><img src="../../../../../image-header/maison.png" alt="Logo maison" class="logo_header">Accueil</a></li>
+                    
+                    <li><a href="../../../../Cours-arduino/cours_arduino.html" class="menu"><img src="../../../../../image-header/cours.png" alt="Logo cours" class="logo_header">Cours Arduino</a></li>
+                    
+                    <li><a href="../../../../Quizz-arduino/quizz_arduino.html" class="menu"><img src="../../../../../image-header/quizz.png" alt="Logo quizz" class="logo_header">Quizz Arduino</a></li>
+                    
+                    <li><a href="https://discord.gg/qn2N2w9gwj" class="menu"><img src="../../../../../image-header/discord.png" alt="Logo discord" class="logo_header">Discord</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!--titre-->
+
+    <a href="../../sumobot.html" class="cours_texte">Retour à la liste des cours</a>
+
+    <h1>Leçon 2 - L'atmega 328p ou mini arduino uno</h1>
+
+    <!--navigation-->
+    <ol>
+        <li><a href="#lien_un">Utilisation</a></li>
+        <li><a href="#lien_deux">Composants</a></li>
+        <li><a href="#lien_trois">Flasher le bootloader</a></li>
+        <li><a href="#lien_quatre">Réalisation de la carte finale</a></li>
+    </ol>
+
+    
+    <article>
+
+        <aside>
+            <h3 id="titre_aside">Récap</h3>
+            <h4>Composants</h4>
+            <p>Atmega328p, quartz de 16MHz, transistors, résistances</p>
+            <h4>Réalisation</h4>
+            <p>Flaser le bootloader<br>Utilisation d'un FTDI pour programmer l'Arduino</p>
+        </aside>
+
+        <h3 class="cours_titre" id="lien_un">1. Utilisation</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Comme vous avez pu le comprendre,  la place nous manque dans ce projet. Au lieu de nous encombrer avec une carte Arduino déjà toute faite, nous allons créer notre propre carte Arduino. Ne vous inquiétez pas, c'est plus simple que ce que vous croyez. </p>
+
+        <h3 class="cours_titre" id="lien_deux">2. Composants</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Nous allons avoir besoin de divers composants que je vais ici vous énumérer et en expliquer le fonctionnement. Le premier est l'atmega 328p qui est le microcontroleur. Cet atmega a le même nombre d'entrées/sorties que la carte Arduino. C'est autour de ce composant principal et essentiel que vont se brancher tous les autres composants. Il vous faudra aussi un quartz de 16MHz qui comme son nom l'indique oscille à 16MHz et qui est l'horloge de la carte. Il vous faudra aussi une resistance et autres condensateurs mais aussi une carte Arduino Uno et un FTDI pour le téléversement.</p>        
+        <a href="https://www.amazon.fr/ATMEGA328P-PU-ARDUINO-avec-stabilisateur-tension/dp/B00OZGWCWE/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=kit+arduino+atmega328p&qid=1630523382&sr=8-5"> <img src="image_deux_sumobot/composants.jpg" alt="exemples composants" class="image_schema"> </a>
+
+        <h3 class="cours_titre" id="lien_trois">3. Flasher le bootloader</h3>
+        <p class="cours_texte"> <span class="espace">_______</span>Tout d'abord avant de flasher le bootloader, essayons de savoir ce que cela signifie. Pour schématiser, un bootloader est une sorte de système d'exploitation et flasher est en quelque sorte l'installation de ce bootloader. Donc notre atmega arrive sans bootloader, il faut donc réaliser le schéma ci-dessous puis connecter votre carte Arduino à votre ordinateur. Ensuite, vous pourrez ouvrir le logiciel Arduino et aller dans fichiers --> exemples --> ArduinoISP --> ArduinoISP, puis dans outils --> Programmateur --> Arduino as ISP et enfin cliquez sur outils --> graver la séquence d'initiatialisation. Avant de faire tout cela, soyez certain d'avoir choisi le bon port COM et le bon type de carte (Arduino Uno).</p>
+        <a href="image_deux_sumobot/composants.jpg"> <img src="image_deux_sumobot/composants.jpg" alt="arduino as isp" class="image_schema"> </a>
+
+        <h3 class="cours_titre" id="lien_quatre">4. Réalisation de la carte finale</h3>
+        <div class="div_question_zebrus"> <img src="image_deux_sumobot/zebre.png" alt="zebrus (mascotte)" class="logo_zebrus_question">
+        <p class="question_zebrus">Nous avons pu voir ci-dessus que le principe de fonctionnement était compliqué, y a-t-il une bibliothèque pour nous aider ? </p> </div>
+        <p class="cours_texte"> <span class="espace">_______</span>Maintenant  que vous avez fini de flasher le bootloader, vous pouvez réaliser le schéma suivant.</p>
+        <p class="cours_texte"> <span class="espace">_______</span>Ensuite, vous pouvez utiliser votre carte comme une carte Arduino Uno et utiliser le FTDI pour téléverser le code. N'oubliez pas de changer le programmateur de la carte de "Arduino as ISP" en " AVRISP mkll". Et voilà vous avez réussi ce qui prouve que ce n'était pas si dur que cela.</p>
+
+        <pre>
+            <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">Servo</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+            
+            <b><font color="#d35400">Servo</font></b> <font color="#000000">monServo</font>
+            
+            <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+             &nbsp;<font color="#000000">monServo</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">11</font><font color="#000000">)</font><font color="#000000">;</font>
+            <font color="#000000">}</font>
+            
+            <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+             &nbsp;<font color="#434f54">&#47;&#47; put your main code here, to run repeatedly:</font>
+             &nbsp;<font color="#d35400">monServo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">0</font><font color="#000000">)</font><font color="#000000">;</font>
+             &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">500</font><font color="#000000">)</font><font color="#000000">;</font>
+             &nbsp;<font color="#d35400">monServo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">180</font><font color="#000000">)</font><font color="#000000">;</font>
+             &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
+            <font color="#000000">}</font>
+            
+        </pre>
+    </article>
+
+    <!-- pied de page -->
+    <footer>
+        <section id="aproposmoi">
+            <p class="titre_footer">A propos de moi</p>
+            <a href="mailto:amathys@outlook.fr">Me contacter</a>
+        </section>
+        
+        <section id="apropossite">
+            <p class="titre_footer">A propos du site</p>
+            <p>Ce site ne contient aucun cookies</p>
+            <p>Ce site n'utilise pas de données personnelles</p>
+            <div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Image par <a href="https://pixabay.com/fr/users/tayebmezahdia-4194100/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4299135">Tayeb MEZAHDIA</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4299135">Pixabay</a></div>
+        </section>
+
+        <section id="footerplan">
+            <p class="titre_footer">Le plan de la page</p>
+            <a href="#en_haut">Allez en haut</a><br>
+            <a href="#lien_un">1. Utilisation</a><br>
+            <a href="#lien_deux">2. Composants</a><br>
+            <a href="#lien_trois">3. Flasher le bootloader</a><br>
+            <a href="#lien_quatre">4. Réalisation de la carte finale</a>
+        </section>
+
+        
+    </footer>
+</body>
+</html>

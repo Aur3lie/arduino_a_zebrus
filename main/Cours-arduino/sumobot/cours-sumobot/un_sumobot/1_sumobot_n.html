@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino à Zebrus - Apprenez à coder en C++</title>
+    <link rel="stylesheet" media="screen and (min-width:900px)" href="1_sumobot_n_g.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="1_sumobot_n_p.css">
+</head>
+<body>
+    <!-- top-page -->
+    <section id="top-page">
+        <header>
+            <section id="en_tete_telephone">
+                <a href=""><img src="../../../../../image-header/cercle_zebrus.png" alt="Logo zebrus" class="zebrus"></a>
+                <h2 id="en_haut">De Arduino à Zebrus</h2>
+                <a href="1_sumobot.html" id="jour_nuit"><img src="../../../../../image-header/jour-nuit.png" alt="Logo paramètre" class="logo_header"></a>
+            </section>
+            <nav>
+                
+                <ul id="menu_ordinateur">
+                    <li><a href="../../../../index_n.html" class="menu"> <img src="../../../../../image-header/maison.png" alt="logo_header"> Accueil </a></li>
+                    
+                    <li><a href="../../../../Cours-arduino/cours_arduino_n.html" class="menu"><img src="../../../../../image-header/cours.png" alt="Logo cours" class="logo_header">Cours Arduino</a></li>
+                    
+                    <li><a href="../../../../Quizz-arduino/quizz_arduino_n.html" class="menu"><img src="../../../../../image-header/quizz.png" alt="Logo quizz" class="logo_header">Quizz Arduino</a></li>
+                    
+                    <li><a href="https://discord.gg/qn2N2w9gwj" class="menu" id="text_discord"><img src="../../../../../image-header/discord.png" alt="Logo discord" class="logo_header">Discord</a></li>
+                </ul>
+
+                
+                <input type="checkbox" id="menu_checkbox">
+                <label for="menu_checkbox" id="menu_image"><img src="../../../../../image-header/menu.png" alt="hamburgeur menu"></label>
+                
+
+                <ul id="menu_telephone">
+                    <li><a href="../../../../../main/index_n.html" class="menu"><img src="../../../../../image-header/maison.png" alt="Logo maison" class="logo_header">Accueil</a></li>
+                    
+                    <li><a href="../../../../Cours-arduino/cours_arduino_n.html" class="menu"><img src="../../../../../image-header/cours.png" alt="Logo cours" class="logo_header">Cours Arduino</a></li>
+                    
+                    <li><a href="../../../../Quizz-arduino/quizz_arduino_n.html" class="menu"><img src="../../../../../image-header/quizz.png" alt="Logo quizz" class="logo_header">Quizz Arduino</a></li>
+                    
+                    <li><a href="https://discord.gg/qn2N2w9gwj" class="menu"><img src="../../../../../image-header/discord.png" alt="Logo discord" class="logo_header">Discord</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!--titre-->
+
+    <a href="../../sumobot_n.html" class="cours_texte">Retour à la liste des cours</a>
+
+    <h1>Leçon 1 - Le cahier des charges</h1>
+
+    <!--navigation-->
+    <ol>
+        <li><a href="#lien_un">Cahier des charges</a></li>
+        <li><a href="#lien_deux">Solution apportée</a></li>
+        <li><a href="#lien_trois">Liste d'achats</a></li>
+    </ol>
+
+    
+    <article>
+
+        <aside>
+            <h3 id="titre_aside">Récap</h3>
+            <h4>Restrictions</h4>
+            <p>- Masse maximum de 500g <br> - en dessous de 10cm x 10cm</p>
+            <h4>Les règles</h4>
+            <p>Ejecter le robot adversaire du "dohyo"</p>
+            <h4>Comment ?</h4>
+            <p>- roues omnidirectionnelles pour aller dans toutes les directions <br>- essayer d'avoir des capteurs dans toutes les directions</p>
+        </aside>
+
+        <h3 class="cours_titre" id="lien_un">1. Cahier des charges</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Comme dit dans le cours numéro 0, chaque robot construit à l'aide de mon site est différent car je ne vous présente pas ici un cours pas à pas mais plutôt une aide guidée qui laisse place à la créativité de chacun. Cependant, il est nécessaire de mettre quelques règles car le sumobot est un robot qui a pour but d'aller dans une compétition et qui dit compétition dit règle. 
+            Voici une liste non exhaustive de règles pour vous donner un aperçu : <br>
+            - masse maximum de 500g <br>
+            - dimensions ne dépassant pas les 10cm x 10cm <br>
+            - aucune dégradation <br>
+            - aucune perturbation du robot adverse <br>
+            - pas de projection <br>
+            - aire de jeux nommé "dohyo" de 82cm <br>
+            - un arbitre <br>
+            - différentes positions de départ <br>
+            -... <br>
+            Pour avoir une liste exhaustive des règles, vous pouvez lire le pdf de l'ESIEESPACE.
+            </p>
+
+        <h3 class="cours_titre" id="lien_deux">2. Solution apportée</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Voici sur quels fondements vont se baser les leçons, c'est-à-dire quelles sont les solutions que nous trouverons les plus adaptées pour être le plus efficace possible lors d'une manche de sumobot : <br>
+            - roues omnidirectionnelles <br>
+            - 4 roues motrices <br>
+            - 4 capteurs de lignes <br>
+            - 5 capteurs à ultrasons <br>
+            - 1 accéléromètre <br>
+            - et bien d'autres choses...
+            </p>
+
+        <h3 class="cours_titre" id="lien_trois">3. Liste d'achats</h3>
+        <p class="cours_texte"> <span class="espace">_______</span> Voici une liste la plus exhaustive possible pour vous dire ce que vous devriez acheter : <br>
+            - <a href="https://www.banggood.com/fr/N20-DC6V-Gear-Motor-Encoder-Speed-Reduction-Gearbox-10-or-30-or-55-or-100RPM-Reducer-Replacement-Motor-p-1847048.html?cur_warehouse=CN&ID=6157420&rmmds=search">4 moteurs </a> <br>
+            - <a href="https://www.banggood.com/fr/4Pcs-37mm-Mini-Mecanum-Wheels+N2O-Coupling-for-Omnidirectional-Mobile-Universal-Wheel-Robot-N20-Motor-p-1717938.html?cur_warehouse=CN&rmmds=search">4 roues omnidirectionnelles </a> <br>
+            - <a href="https://www.banggood.com/fr/SURPASS-Hobby-S0017M-17g-Metal-Gear-1_8KG-Digital-Servo-Steering-Gear-for-RC-1-or-18-Helicoper-Airplane-Truck-Car-Boat-Robot-p-1824396.html?cur_warehouse=CN&rmmds=search">1 servomoteur </a> <br>
+            - <a href="https://www.banggood.com/fr/5Pcs-HC-SR04-Ultrasonic-Module-with-RGB-Light-Distance-Sensor-Obstacle-Avoidance-Sensor-Smart-Car-Robot-Geekcreit-for-Arduino-products-that-work-with-official-Arduino-boards-p-1608923.html?cur_warehouse=CN&rmmds=search">5 capteurs à ultrasons </a> <br>
+            - <a href="https://lcsc.com/product-detail/Reflective-Optical-Interrupters_Vishay-Intertech-TCRT5000L_C24085.html">4 capteurs infrarouges TCRT5000L </a><br>
+            - <a href="https://www.banggood.com/fr/DC-DC-5V-3A-Power-Supply-Module-Buck-Step-Down-Regulator-Module-24V-12V-9V-To-5V-Fixed-Output-p-1177912.html?cur_warehouse=CN&rmmds=search">1 convertisseur 9V vers 5V</a><br>
+            - <a href="https://www.amazon.fr/EBL-Lithium-ION-Multiples-Batteries-Rechargeables/dp/B06VSXT6GC/ref=sr_1_6?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=9v+rechargeable+800mah+EBL+chargeur&qid=1630517012&sr=8-6">2 piles 9V rechargeables </a><br>
+            - <a href="https://www.banggood.com/fr/GY-61-ADXL335-Angle-Sensor-Module-3-Axis-Analog-Accelerometer-Tilt-Angle-Board-Triaxial-Gravity-Acceleration-p-1536690.html?cur_warehouse=CN&rmmds=search">1 accéléromètre</a><br>
+            - <a href="https://www.banggood.com/fr/Geekcreit-FT232RL-FTDI-USB-To-TTL-Serial-Converter-Adapter-Module-Geekcreit-for-Arduino-products-that-work-with-official-Arduino-boards-p-917226.html?cur_warehouse=CN&rmmds=search">1 FTDI</a><br>
+            - <a href="https://www.banggood.com/fr/Geekcreit-UNOR3-ATmega328P-Development-Board-No-Cable-Geekcreit-for-Arduino-products-that-work-with-official-Arduino-boards-p-964163.html?cur_warehouse=CN&ID=6300464&rmmds=search">1 carte Arduino</a><br>
+            - <a href="https://lcsc.com/product-detail/Motor-Driver-ICs_STMicroelectronics-L293D_C12340.html">2 L293D</a><br>
+            - <a href="https://lcsc.com/product-detail/Inverters_HGSEMI-CD4069BE_C507157.html">1 CD4069</a><br>
+            - <a href="https://lcsc.com/product-detail/ATMEL-AVR_Microchip-Tech-ATMEGA328P-PU_C33901.html">2 ou 3 atmegas 328p</a><br>
+            - <a href="https://lcsc.com/product-detail/Through-Hole-Resistors_UNI-ROYAL-Uniroyal-Elec-MFR0W4F2000A50_C58613.html">des résistances de 200 Ohm</a><br>
+            - <a href="https://lcsc.com/product-detail/Through-Hole-Resistors_TyoHM-RN-1-4W-10K-F-T-B-A1_C410695.html">des résistances de 10k Ohm</a><br>
+            - <a href="https://lcsc.com/product-detail/Ceramic-Disc-Capacitors_Dersonic-CC1H220JA1FDCH4B10MF_C254096.html">des condensateurs de 22pF</a><br>
+            - <a href="https://lcsc.com/product-detail/Ceramic-Disc-Capacitors_Dersonic-CC1H104ZA1PD3F5O30MF_C254067.html">des condensateurs de 100nF</a><br>
+            - <a href="https://lcsc.com/product-detail/Crystals_Yangxing-Tech-X49SD16MSD2SC_C16212.html">des crystals de 16MHz</a><br>
+            Et voilà ! A tout cela il vous faut ajouter fils, fer à souder, pcbs... et plein d'autres choses pour bricoler.
+             </p>
+
+        
+
+    </article>
+    <!-- pied de page -->
+    <footer>
+        <section id="aproposmoi">
+            <p class="titre_footer">A propos de moi</p>
+            <a href="mailto:amathys@outlook.fr">Me contacter</a>
+        </section>
+        
+        <section id="apropossite">
+            <p class="titre_footer">A propos du site</p>
+            <p>Ce site ne contient aucun cookies</p>
+            <p>Ce site n'utilise pas de données personnelles</p>
+            <div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Image par <a href="https://pixabay.com/fr/users/tayebmezahdia-4194100/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4299135">Tayeb MEZAHDIA</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4299135">Pixabay</a></div>
+        </section>
+
+        <section id="footerplan">
+            <p class="titre_footer">Le plan de la page</p>
+            <a href="#en_haut">Allez en haut</a><br>
+            <a href="#lien_un">1. Cahier des charges</a><br>
+            <a href="#lien_deux">2. Solution apportée</a><br>
+            <a href="#lien_trois">3. Liste d'achats</a>
+        </section>
+
+        
+    </footer>
+</body>
+</html>

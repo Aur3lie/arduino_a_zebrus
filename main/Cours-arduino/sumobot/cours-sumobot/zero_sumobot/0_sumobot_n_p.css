@@ -1,0 +1,525 @@
+/* inclure les polices */
+
+@font-face {
+    font-family: Amatic;
+    src: url(../../../../police/AmaticSC-Regular.ttf);
+}
+@font-face {
+    font-family: Itim;
+    src: url(../../../../police/Itim-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../../../../police/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../../../../police/Roboto-Regular.ttf);
+}
+
+
+/* pour les liens */
+
+@media (min-width : 1016px){
+    a:hover
+    {
+        font-weight: bold;
+    }
+    a:visited
+    {
+        text-decoration: none;
+
+    }
+    a:active
+    {
+        color:red;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    /* réitnitialiser la marge pas défaut */
+
+
+    body /*rénitialiser les marges*/
+    {
+        margin: 0 auto;
+        display: flex;
+        align-content:space-around;
+        flex-direction: column;
+        background-color: #292929;
+
+    }
+
+    /* On s'occupe de la page qui est toute en haut */
+
+    #menu_telephone /*enlever le menu pour le telephone*/
+    {
+        display: none;
+    }
+    #en_tete_telephone /*mettre les icones aligné*/
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+    header /*faire le dégradé et écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+    }
+
+    nav /*écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #menu_ordinateur /*mettre les éléments de la liste en mode horizontale*/
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    header img /*définir la taille des images et les marges*/
+    {
+        height:4em;
+        margin:0.5em;
+    }
+    #text_discord /*éviter que le texte soit trop coller à gauche*/
+    {
+        margin-right: 0.5em;
+    }
+    .zebrus /*mettre le logo plus grand*/
+    {
+        height:6em;
+    }
+    header li /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    header #menu_ordinateur a /*centrer le texte*/
+    {
+        display: flex;
+        align-items:center;
+    }
+    #menu_image /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    #menu_checkbox /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    header h2 /*titre du site*/
+    {
+        font-family: "Roboto";
+        color:white;
+        font-size: 2em;
+    }
+    header a /*titre du menu*/
+    {
+        color:black;
+        font-size: 1em;
+    }
+
+    /*le titre*/
+    h1
+    {
+        display:flex;
+        justify-content: center;
+        color:#fab400;
+        font-family: "Amatic";
+        margin:0.5em;
+        font-size: 3em;
+        text-decoration: underline;
+    }
+
+    /*le cours*/
+    ol /*mise en page du titre*/
+    {
+        display:flex;
+        flex-direction: column;
+        color:#fab400;
+        font-family: "Itim";
+    }
+    ol a /*mettre les titres en orange et as en violet*/
+    {
+        color:#fab400;
+    }
+    .cours_texte /*mettre en page le cours*/
+    {
+        margin:2em;
+        font-family: "Lato";
+        color:white;
+        text-align: justify;
+    }
+    .cours_titre /*mettre les titres*/
+    {
+        display:flex;
+        justify-content: center;
+        size:2em;
+        color:#fab400;
+        font-family:"Itim";
+    }
+    aside /*mettre en page le récap sur la droite*/
+    {
+        width:20em;  
+        float:right;
+        margin:1em;
+        background-color:#62bec2;
+        border-radius: 2em;
+        padding:0.5em;
+        text-align:justify;
+    }
+    #titre_aside /*mettre le titre du récap*/
+    {
+        display:flex;
+        justify-content: center;
+        color:white;
+        font-family: "Amatic";
+        text-decoration: underline;
+        font-size: 3em;
+        padding:0em;
+        margin:0em;
+    }
+    .espace /*transformer les hunderscores en espace*/
+    {
+        color:#292929;
+    }
+    h4 /*changer les sous titre du récap*/
+    {
+        font-family: "Itim";
+        font-size: 1.5em;
+        padding:0em;
+        margin:0em;
+        color:white;
+    }
+    article a /*changer le type des liens*/
+    {
+        font-style:italic;
+        color:black;
+        background-color: white;
+    }
+    article a:visited /*changer le type des liens*/
+    {
+        font-style: italic;
+        color:black;
+        background-color: white;
+    }
+    article a:hover /*changer le type des liens*/
+    {
+        font-style: bold;
+        color:black;
+        background-color: white;
+    }
+    .image_schema /*gérer les images d'illustrations*/
+    {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width:30em;
+    }
+    .logo_zebrus_question
+    {
+        margin:2em;
+        width:5em;
+    }
+    .question_zebrus
+    {
+        margin:2em;
+        font-family: "Lato";
+        color:black;
+        text-align: justify;
+    }
+    .div_question_zebrus
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #62bec2;
+    }
+
+    /* pied de page */
+    footer /*gérer la couleur*/
+    {
+        background-color: #62bec2;
+    }
+    footer /*mettre en couleur*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .titre_footer /*mettre les titres plus grand*/
+    {
+        font-size: x-large;
+        text-decoration:underline;
+    }
+    footer a,p,div /*gérer les marges*/
+    {
+        margin-top:1em;
+        margin-bottom: 1em;
+    }
+    footer a /*mettre les liens en italique*/
+    {
+        font-style: italic;
+        color:black;
+    }
+}
+
+@media (max-width : 1015px){
+    a:hover
+    {
+        font-weight: bold;
+    }
+    a:visited
+    {
+        text-decoration: none;
+
+    }
+    a:active
+    {
+        color:red;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    /* réitnitialiser la marge pas défaut*/
+
+
+    body /*reseat tout le body*/
+    {
+        margin: 0 auto;
+        display: flex;
+        align-content:space-around;
+        flex-direction: column;
+        background-color: #292929;
+    }
+
+
+
+    /* On s'occupe de la page qui est toute en haut */
+
+    #menu_telephone /*on est sur pc donc pas la peine d'un deuxième menu*/
+    {
+        display: none;
+    }
+    #en_tete_telephone /*mettre les qqs icones bien aligné*/
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+
+    header /*faire le dégradé et écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #62bec2 0%, rgb(93,159,155) 100%);
+    }
+
+    nav /*écarté les différents éléments*/
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #menu_ordinateur /*mettre les éléments de la liste en mode horizontale*/
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    header img /*définir la taille des images et les marges*/
+    {
+        height:4em;
+        margin:0.5em;
+    }
+    .zebrus /*mettre le logo plus grand*/
+    {
+        height:6em;
+    }
+    #text_discord /*éviter que le texte soit trop coller à gauche*/
+    {
+        margin-right: 0.5em;
+    }
+    header li /*enlever les puces de la liste à puce*/
+    {
+        list-style-type: none;
+    }
+    header #menu_ordinateur a /*centrer le texte*/
+    {
+        display: flex;
+        align-items:center;
+    }
+    #menu_image /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    #menu_checkbox /*uniquement dans la version téléphone*/
+    {
+        display:none;
+    }
+    header h2 /*titre du site*/
+    {
+        font-family: "Roboto";
+        color:white;
+        font-size: 1.5em;
+    }
+    header a /*titre du menu*/
+    {
+        color:black;
+        font-size: 1em;
+    }
+
+    /*le titre*/
+    h1
+    {
+        display:flex;
+        justify-content: center;
+        color:#fab400;
+        font-family: "Amatic";
+        margin:0.5em;
+        font-size: 3em;
+        text-decoration: underline;
+    }
+
+    /*le cours*/
+    ol /*mise en page du titre*/
+    {
+        display:flex;
+        flex-direction: column;
+        color:#fab400;
+        font-family: "Itim";
+    }
+    ol a /*mettre les titres en orange et as en violet*/
+    {
+        color:#fab400;
+    }
+    .cours_texte /*mettre en page le cours*/
+    {
+        margin:2em;
+        font-family: "Lato";
+        color:white;
+        text-align: justify;
+    }
+    .cours_titre /*mettre les titres*/
+    {
+        display:flex;
+        justify-content: center;
+        size:2em;
+        color:#fab400;
+        font-family:"Itim";
+    }
+    aside /*mettre en page le récap sur la droite*/
+    {
+        width:20em;  
+        float:right;
+        margin:1em;
+        background-color:#62bec2;
+        border-radius: 2em;
+        padding:0.5em;
+        text-align:justify;
+    }
+    #titre_aside /*mettre le titre du récap*/
+    {
+        display:flex;
+        justify-content: center;
+        color:white;
+        font-family: "Amatic";
+        text-decoration: underline;
+        font-size: 3em;
+        padding:0em;
+        margin:0em;
+    }
+    .espace /*transformer les hunderscores en espace*/
+    {
+        color:#292929;
+    }
+    h4 /*changer les sous titre du récap*/
+    {
+        font-family: "Itim";
+        font-size: 1.5em;
+        padding:0em;
+        margin:0em;
+        color:white;
+    }
+    article a /*changer le type des liens*/
+    {
+        font-style:italic;
+        color:black;
+        background-color: white;
+    }
+    article a:visited /*changer le type des liens*/
+    {
+        font-style: italic;
+        color:black;
+        background-color: white;
+    }
+    article a:hover /*changer le type des liens*/
+    {
+        font-style: bold;
+        color:black;
+        background-color: white;
+    }
+    .image_schema /*gérer les images d'illustrations*/
+    {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width:20em;
+    }
+    .logo_zebrus_question
+    {
+        margin:2em;
+        width:5em;
+    }
+    .question_zebrus
+    {
+        margin:2em;
+        font-family: "Lato";
+        color:black;
+        text-align: justify;
+    }
+    .div_question_zebrus
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #62bec2;
+    }
+
+    /* pied de page */
+    footer /*gérer la couleur*/
+    {
+        background-color: #62bec2;
+    }
+    footer /*mettre en couleur*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .titre_footer /*mettre les titres plus grand*/
+    {
+        font-size: x-large;
+        text-decoration:underline;
+    }
+    footer a,p,div /*gérer les marges*/
+    {
+        margin-top:1em;
+        margin-bottom: 1em;
+    }
+    footer a /*mettre les liens en italique*/
+    {
+        font-style: italic;
+        color:black;
+    }
+}
