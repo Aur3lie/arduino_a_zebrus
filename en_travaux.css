@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Amatic;
+    src: url(../police/AmaticSC-Regular.ttf);
+}
+@font-face {
+    font-family: Itim;
+    src: url(../police/Itim-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../police/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../police/Roboto-Regular.ttf);
+}
+
+img
+{
+    width:30em;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+h1
+{
+    font-family: Roboto;
+    text-align: center;
+    color:#fab400;
+}
+div
+{
+    font-family: Amatic;
+    text-align: center;
+}
+body
+{
+    background-image: url("image_en_travaux/cone-de-signalisation.png");
+}
+a:visited
+{
+    font-weight: bold;
+    text-decoration: none;
+    color:black
+}
+a:hover
+{
+    font-weight: bold;
+    text-decoration: none;
+    color:black
+}
+a
+{
+    font-weight: bold;
+    text-decoration: none;
+    color:black
+}
